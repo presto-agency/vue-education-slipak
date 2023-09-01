@@ -1,18 +1,22 @@
 <template>
   <div class="h-full"  id="app">
-    <Header/>
-    <router-view/>
+<!--    <HeaderPage/>-->
+    <homePage/>
+<!--    <router-view/>-->
+
   </div>
 </template>
 
 
-<script>
-import Header from "./components/pages/Header";
+<script >
+// import HeaderPage from "./components/pages/HeaderPage";
+import HomePage from "./views/HomePage";
 
 export default {
   name:"App",
   components : {
-    Header,
+//    HeaderPage,
+    HomePage,
 
   }
 }

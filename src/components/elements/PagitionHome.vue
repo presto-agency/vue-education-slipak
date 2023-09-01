@@ -1,15 +1,15 @@
 <template>
   <div class="w-full">
-    <Button color="pagition" variant-type="outline" name="<<" v-on:click.native="testFunction(1)"></Button>
-    <Button :variant-type="item==i ? '' : 'outline' " color="pagition" v-for="i in page"  :key="i" :name="i"  v-on:click.native="testFunction(i)" />
-    <Button color="pagition" variant-type="outline" name=">>" v-on:click.native="testFunction(pages)"></Button>
+    <ButtonMain color="pagition" variant-type="outline" name="<<" v-on:click.native="testFunction(1)"></ButtonMain>
+    <ButtonMain :variant-type="item==i ? '' : 'outline' " color="pagition" v-for="i in page"  :key="i" :name="i"  v-on:click.native="testFunction(i)" />
+    <ButtonMain color="pagition" variant-type="outline" name=">>" v-on:click.native="testFunction(pages)"></ButtonMain>
   </div>
 </template>
 
 <script>
-import Button from "./Button";
+import ButtonMain from "./ButtonMain";
 export default {
-  name: 'pagition',
+  name: 'pagitionHome',
   data(){
     return {
       page : [1,2,3,4,5]
@@ -41,7 +41,7 @@ export default {
 
   },
   components: {
-    Button
+    ButtonMain
   },
   props : ['pages', 'item', 'status', 'species', 'firstpage']
 

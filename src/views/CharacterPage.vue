@@ -1,18 +1,18 @@
 <template>
   <div class="max-w-screen-2xl mx-auto  flex flex-wrap">
     <input class="w-full rounded-lg p-4 m-4" placeholder="Search Character Name .. " type="text" v-model="search">
-    <Card page="character"  v-for="item in filterSearch" :key="item.id" :id="item.id" :images="item.image" :title="item.name" :status="item.status" :species="item.species" />
-    <Pagition @item="item=$event" :pages="pagition" :item="item" :firstpage="[1,2,3,4,5]"></Pagition>
+    <CardMain page="character"  v-for="item in filterSearch" :key="item.id" :id="item.id" :images="item.image" :title="item.name" :status="item.status" :species="item.species" />
+    <PagitionHome @item="item=$event" :pages="pagition" :item="item" :firstpage="[1,2,3,4,5]"></PagitionHome>
   </div>
 </template>
 
 <script>
 
 import axios from "axios";
-import Card from "../components/elements/Card";
-import Pagition from  "../components/elements/Pagition";
+import CardMain from "../components/elements/CardMain";
+import PagitionHome from "../components/elements/PagitionHome";
 export default {
-  name: 'character',
+  name: 'CharacterPage',
   data(){
     return {
       item : 1,
@@ -47,8 +47,8 @@ export default {
     }
   },
   components : {
-    Pagition,
-    Card
+    PagitionHome,
+    CardMain
   },created() {
     this.getData(this.item);
     this.listPage();

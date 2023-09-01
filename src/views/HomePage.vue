@@ -26,7 +26,7 @@ import axios from "axios";
 
 
 export default {
-  name: 'Home',
+  name: 'HomePage',
   data(){
     return {
       item: 1,
@@ -34,7 +34,8 @@ export default {
       pagition : null,
       search: "",
       title: 'Hi ths text for vue education',
-      titleSecondary: 'api Rick',
+      titleSecondary: 'api Rick And Morty',
+      url_link: 'rickandmortyapi.com/documentation/#rest',
     }
   },
   components: {},
@@ -43,7 +44,7 @@ export default {
   },
   methods: {
     getData : function (){
-      axios.get('https://rickandmortyapi.com/api/character/?page=20').then(response => this.list = response.data.results);
+      axios.get('https://rickandmortyapi.com/api/character/?page=7').then(response => this.list = response.data.results);
     },
     gotoCharsertD(event){
       this.$router.push({ name: 'Character Detail', params:{id:event} })

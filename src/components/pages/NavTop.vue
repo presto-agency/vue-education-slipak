@@ -10,6 +10,6 @@
 
 <script>
 export  default {
-  name : 'Nav',
+  name : 'NavTop',
 }
 </script>

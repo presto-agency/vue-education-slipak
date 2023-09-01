@@ -1,16 +1,16 @@
 <template>
   <div class="max-w-screen-2xl mx-auto  flex flex-wrap">
-    <Card v-for="item in list" page="episode" :status="item.episode" :title="item.name" :species="item.air_date"  :key="item.index" />
-    <Pagition @item="item=$event" :item="item" :pages="pagition" :firstpage="[1,2,3]"/>
+    <CardMain v-for="item in list" page="episode" :status="item.episode" :title="item.name" :species="item.air_date"  :key="item.index" />
+    <PagitionHome @item="item=$event" :item="item" :pages="pagition" :firstpage="[1,2,3]"/>
   </div>
 </template>
 
 <script>
 import axios from "axios";
-import Card from "../components/elements/Card";
-import Pagition from "../components/elements/Pagition";
+import CardMain from "../components/elements/CardMain";
+import PagitionHome from "../components/elements/PagitionHome";
 export default {
-  name:"Episde",
+  name:"EpisdePage",
   data(){
     return {
       item : 1,
@@ -31,8 +31,8 @@ export default {
     }
   },
   components : {
-    Pagition,
-    Card
+    PagitionHome,
+    CardMain
   },
   mounted() {
     this.getData(this.item);

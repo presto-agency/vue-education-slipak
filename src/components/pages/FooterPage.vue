@@ -1,7 +1,7 @@
 <template>
-  <fotoer class="">
+  <footer class="">
       <p class="text-white">Footer</p>
-  </fotoer>
+  </footer>
 </template>
 
 <script>

@@ -16,18 +16,18 @@
       <div class="w-full">
         <h4 class="text-white text-3xl py-2 mt-4 font-extrabold">Episode</h4>
       </div>
-      <Card v-for="item in episode" page="episode" :status="list.status" :title="item.name" :species="item.air_date"  :key="item.index" />
+      <CardMain v-for="item in episode" page="episode" :status="list.status" :title="item.name" :species="item.air_date"  :key="item.index" />
     </div>
   </div>
 </template>
 
 <script>
 import axios from "axios";
-import Card from "../components/elements/Card";
+import CardMain from "../components/elements/CardMain";
 
 export  default {
-  name : 'CharacterDetail',
-  components: {Card},
+  name : 'CharacterDetailPage',
+  components: {CardMain},
   data(){
     return {
       id : null,

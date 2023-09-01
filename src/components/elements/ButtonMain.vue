@@ -6,7 +6,7 @@
 
 <script>
 export  default {
-  name : 'Button',
+  name : 'ButtonMain',
   data(){
    return {
     count : this.status
